@@ -60,7 +60,7 @@ mysql -u root -p
 show grants for 'sys_temp'@'%';
 exit
 ```
-![Скриншот списка прав пользователя](https://github.com/StanislavBaranovskii/12-2-hw/blob/main/img/12-2-1-5.png "Скриншот списка  прав пользователя")
+![Скриншот списка прав пользователя](https://github.com/StanislavBaranovskii/12-2-hw/blob/main/img/12-2-1-5.png "Скриншот списка прав пользователя")
 
 1.6. Переподключитесь к базе данных от имени sys_temp.
 
@@ -68,12 +68,41 @@ exit
 ```sql
 ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
+
+```
+mysql -u sys_temp -p 
+ALTER USER 'sys_temp'@'%' IDENTIFIED WITH mysql_native_password BY '12345678';
+exit
+```
+
 1.6. По ссылке https://downloads.mysql.com/docs/sakila-db.zip скачайте дамп базы данных.
+```
+wget -c https://downloads.mysql.com/docs/sakila-db.zip
+unzip sakila-db.zip
+cd sakila-db
+```
 
 1.7. Восстановите дамп в базу данных.
+```
+mysql -u sys_temp -p
+create database SakilaDB;
+show databases;
+use SakilaDB;
+source MynewDB.sql;
+exit
+
+
+```
 
 1.8. При работе в IDE сформируйте ER-диаграмму получившейся базы данных. При работе в командной строке используйте команду для получения всех таблиц базы данных. (скриншот)
-
+```
+mysql -u sys_temp -p
+show databases;
+use SakilaDB;
+show tables;
+exit
+```
+![Скриншот списка таблиц](https://github.com/StanislavBaranovskii/12-2-hw/blob/main/img/12-2-1-8.png "Скриншот списка таблиц")
 *Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.*
 
 ---
