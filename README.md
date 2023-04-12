@@ -68,7 +68,7 @@ exit
 ```
 ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
-
+### запрос:
 ```sql
 mysql -u sys_temp -p 
 alter user 'sys_temp'@'%' IDENTIFIED with mysql_native_password by '12345678';
@@ -114,6 +114,17 @@ exit
 Название таблицы | Название первичного ключа
 customer         | customer_id
 ```
+### просмотр структуры таблиц в БД SakilaDB :
+```sql
+mysql -u sys_temp -p
+use SakilaDB;
+show tables;
+show create table имя_таблицы;
+или
+describe имя_таблицы;
+exit
+```
+### Файл с описанием всех таблиц базы SakilaDB [файл в формате Excel](https://github.com/StanislavBaranovskii/12-2-hw/blob/main/source/hw-12-2-2.xlsx)
 
 ---
 ## Задание 3*
