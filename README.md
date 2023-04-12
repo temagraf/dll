@@ -122,14 +122,31 @@ show tables;
 show create table имя_таблицы;
 или
 describe имя_таблицы;
+или
+информацию о первичных ключах можно в служебных таблицах information_schema.key_column_usage
 exit
 ```
-### Файл с описанием всех таблиц базы SakilaDB [файл в формате Excel](https://github.com/StanislavBaranovskii/12-2-hw/blob/main/source/hw-12-2-2.xlsx)
+### Файл с описанием всех таблиц базы SakilaDB : [hw-12-2-2.xlsx](https://github.com/StanislavBaranovskii/12-2-hw/blob/main/source/hw-12-2-2.xlsx)
 
 ---
 ## Задание 3*
 3.1. Уберите у пользователя sys_temp права на внесение, изменение и удаление данных из базы sakila.
-
+```sql
+mysql -u root -p 
+show grants for 'sys_temp'@'%';
+grant ALL PRIVILEGES on SakilaDB.* to 'sys_temp'@'%';
+revoke INSERT, UPDATE, DELETE on SakilaDB.* from 'sys_temp'@'%';
+show grants for 'sys_temp'@'%';
+flush privileges;
+exit
+```
 3.2. Выполните запрос на получение списка прав для пользователя sys_temp. (скриншот)
-
+```sql
+mysql -u root -p 
+show grants for 'sys_temp'@'%';
+exit
+```
+![Скриншот прав пользователя](https://github.com/StanislavBaranovskii/12-2-hw/blob/main/img/12-2-3.png "Скриншот прав пользователя")
 *Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.*
+
+---
