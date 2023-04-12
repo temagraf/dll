@@ -21,7 +21,7 @@
 
 ## Задание 1
 1.1. Поднимите чистый инстанс MySQL версии 8.0+. Можно использовать локальный сервер или контейнер Docker.
-```
+```sh
 sudo apt update
 sudo apt install gnupg
 wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
@@ -32,14 +32,14 @@ sudo systemctl status mysql.service
 ```
 
 1.2. Создайте учётную запись sys_temp. 
-```
+```sql
 mysql -u root -p 
 create user 'sys_temp'@'%' identified by '12345678';
 exit
 ```
 
 1.3. Выполните запрос на получение списка пользователей в базе данных. (скриншот)
-```
+```sql
 mysql -u root -p 
 select User,Host from mysql.user;
 exit
@@ -47,7 +47,7 @@ exit
 ![Скриншот списка пользователей](https://github.com/StanislavBaranovskii/12-2-hw/blob/main/img/12-2-1-3.png "Скриншот списка пользователей")
 
 1.4. Дайте все права для пользователя sys_temp. 
-```
+```sql
 mysql -u root -p 
 grant ALL PRIVILEGES on *.* to 'sys_temp'@'%' with GRANT option;
 flush privileges;
@@ -55,7 +55,7 @@ exit
 ```
 
 1.5. Выполните запрос на получение списка прав для пользователя sys_temp. (скриншот)
-```
+```sql
 mysql -u root -p 
 show grants for 'sys_temp'@'%';
 exit
@@ -65,37 +65,39 @@ exit
 1.6. Переподключитесь к базе данных от имени sys_temp.
 
 Для смены типа аутентификации с sha2 используйте запрос: 
-```sql
+```
 ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
 
-```
+```sql
 mysql -u sys_temp -p 
-ALTER USER 'sys_temp'@'%' IDENTIFIED WITH mysql_native_password BY '12345678';
+alter user 'sys_temp'@'%' IDENTIFIED with mysql_native_password by '12345678';
 exit
 ```
 
 1.6. По ссылке https://downloads.mysql.com/docs/sakila-db.zip скачайте дамп базы данных.
-```
+```sh
 wget -c https://downloads.mysql.com/docs/sakila-db.zip
 unzip sakila-db.zip
 cd sakila-db
 ```
 
 1.7. Восстановите дамп в базу данных.
-```
+```sql
 mysql -u sys_temp -p
+show databases;
 create database SakilaDB;
 show databases;
 use SakilaDB;
-source MynewDB.sql;
+show tables;
+source sakila-schema.sql;
+source sakila-data.sql;
+show tables;
 exit
-
-
 ```
 
 1.8. При работе в IDE сформируйте ER-диаграмму получившейся базы данных. При работе в командной строке используйте команду для получения всех таблиц базы данных. (скриншот)
-```
+```sql
 mysql -u sys_temp -p
 show databases;
 use SakilaDB;
