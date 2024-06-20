@@ -128,6 +128,8 @@ exit
 ```
 ### Файл с описанием всех таблиц базы SakilaDB : [hw-12-2-2.xlsx](https://github.com/temagraf/dll/blob/main/source/hw-12-2-2.xlsx)
 
+!![Скриншот-5](https://github.com/temagraf/dll/blob/main/img/12-2-1-9.png)
+
 ---
 ## Задание 3*
 3.1. Уберите у пользователя sys_temp права на внесение, изменение и удаление данных из базы sakila.
