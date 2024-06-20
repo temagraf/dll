@@ -1,4 +1,4 @@
-# Домашнее задание к занятию 12.2. «`Работа с данными (DDL/DML)`» - `Барановский Станислав`
+#«`Работа с данными (DDL/DML)`» - `Яковлев Артем`
 
 ### Инструкция по выполнению домашнего задания
 
@@ -44,7 +44,7 @@ mysql -u root -p
 select User,Host from mysql.user;
 exit
 ```
-![Скриншот списка пользователей](https://github.com/StanislavBaranovskii/12-2-hw/blob/main/img/12-2-1-3.png "Скриншот списка пользователей")
+![Скриншот списка пользователей](https://github.com/temagraf/ddl/blob/main/img/12-2-1-3.png "Скриншот списка пользователей")
 
 1.4. Дайте все права для пользователя sys_temp. 
 ```sql
@@ -60,7 +60,7 @@ mysql -u root -p
 show grants for 'sys_temp'@'%';
 exit
 ```
-![Скриншот списка прав пользователя](https://github.com/StanislavBaranovskii/12-2-hw/blob/main/img/12-2-1-5.png "Скриншот списка прав пользователя")
+![Скриншот списка прав пользователя](https://github.com/temagraf/ddl/blob/main/img/12-2-1-5.png "Скриншот списка прав пользователя")
 
 1.6. Переподключитесь к базе данных от имени sys_temp.
 
@@ -104,7 +104,7 @@ use SakilaDB;
 show tables;
 exit
 ```
-![Скриншот списка таблиц](https://github.com/StanislavBaranovskii/12-2-hw/blob/main/img/12-2-1-8.png "Скриншот списка таблиц")
+![Скриншот списка таблиц](https://github.com/temagraf/ddl/blob/main/img/12-2-1-8.png "Скриншот списка таблиц")
 *Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.*
 
 ---
@@ -126,7 +126,7 @@ describe имя_таблицы;
 информацию о первичных ключах можно в служебных таблицах information_schema.key_column_usage
 exit
 ```
-### Файл с описанием всех таблиц базы SakilaDB : [hw-12-2-2.xlsx](https://github.com/StanislavBaranovskii/12-2-hw/blob/main/source/hw-12-2-2.xlsx)
+### Файл с описанием всех таблиц базы SakilaDB : [hw-12-2-2.xlsx](https://github.com/temagraf/ddl/blob/main/source/hw-12-2-2.xlsx)
 
 ---
 ## Задание 3*
@@ -146,7 +146,7 @@ mysql -u root -p
 show grants for 'sys_temp'@'%';
 exit
 ```
-![Скриншот прав пользователя](https://github.com/StanislavBaranovskii/12-2-hw/blob/main/img/12-2-3.png "Скриншот прав пользователя")
+![Скриншот прав пользователя](https://github.com/temagraf/ddl/blob/main/img/12-2-3.png "Скриншот прав пользователя")
 *Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.*
 
 ---
