@@ -44,7 +44,7 @@ mysql -u root -p
 select User,Host from mysql.user;
 exit
 ```
-![Скриншот](https://github.com/temagraf/ddl/blob/main/img/12-2-1-3.png "Скриншот")
+![Скриншот-1](https://github.com/temagraf/ddl/blob/main/img/12-2-1-3.png)
 
 1.4. Дайте все права для пользователя sys_temp. 
 ```sql
@@ -60,7 +60,7 @@ mysql -u root -p
 show grants for 'sys_temp'@'%';
 exit
 ```
-![Скриншот](https://github.com/temagraf/ddl/blob/main/img/12-2-1-5.png "Скриншот")
+![Скриншот-2](https://github.com/temagraf/ddl/blob/main/img/12-2-1-5.png)
 
 1.6. Переподключитесь к базе данных от имени sys_temp.
 
@@ -104,7 +104,7 @@ use SakilaDB;
 show tables;
 exit
 ```
-![Скриншот списка таблиц](https://github.com/temagraf/ddl/blob/main/img/12-2-1-8.png "Скриншот списка таблиц")
+!![Скриншот-3](https://github.com/temagraf/ddl/blob/main/img/12-2-1-8.png)
 *Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.*
 
 ---
@@ -146,7 +146,7 @@ mysql -u root -p
 show grants for 'sys_temp'@'%';
 exit
 ```
-![Скриншот прав пользователя](https://github.com/temagraf/ddl/blob/main/img/12-2-3.png "Скриншот прав пользователя")
+![Скриншот-4](https://github.com/temagraf/ddl/blob/main/img/12-2-3.png)
 *Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.*
 
 ---
