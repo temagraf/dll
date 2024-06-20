@@ -44,7 +44,7 @@ mysql -u root -p
 select User,Host from mysql.user;
 exit
 ```
-![Скриншот списка пользователей](https://github.com/temagraf/ddl/blob/main/img/12-2-1-3.png "Скриншот списка пользователей")
+![Скриншот](https://github.com/temagraf/ddl/blob/main/img/12-2-1-3.png "Скриншот")
 
 1.4. Дайте все права для пользователя sys_temp. 
 ```sql
@@ -60,7 +60,7 @@ mysql -u root -p
 show grants for 'sys_temp'@'%';
 exit
 ```
-![Скриншот списка прав пользователя](https://github.com/temagraf/ddl/blob/main/img/12-2-1-5.png "Скриншот списка прав пользователя")
+![Скриншот](https://github.com/temagraf/ddl/blob/main/img/12-2-1-5.png "Скриншот")
 
 1.6. Переподключитесь к базе данных от имени sys_temp.
 
