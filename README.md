@@ -44,7 +44,7 @@ mysql -u root -p
 select User,Host from mysql.user;
 exit
 ```
-![Скриншот-1](https://github.com/temagraf/ddl/blob/main/img/12-2-1-3.png)
+![Скриншот-1](https://github.com/temagraf/dll/blob/main/img/12-2-1-3.png)
 
 1.4. Дайте все права для пользователя sys_temp. 
 ```sql
@@ -60,7 +60,7 @@ mysql -u root -p
 show grants for 'sys_temp'@'%';
 exit
 ```
-![Скриншот-2](https://github.com/temagraf/ddl/blob/main/img/12-2-1-5.png)
+![Скриншот-2](https://github.com/temagraf/dll/blob/main/img/12-2-1-5.png)
 
 1.6. Переподключитесь к базе данных от имени sys_temp.
 
@@ -104,7 +104,7 @@ use SakilaDB;
 show tables;
 exit
 ```
-!![Скриншот-3](https://github.com/temagraf/ddl/blob/main/img/12-2-1-8.png)
+!![Скриншот-3](https://github.com/temagraf/dll/blob/main/img/12-2-1-8.png)
 *Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.*
 
 ---
@@ -126,7 +126,7 @@ describe имя_таблицы;
 информацию о первичных ключах можно в служебных таблицах information_schema.key_column_usage
 exit
 ```
-### Файл с описанием всех таблиц базы SakilaDB : [hw-12-2-2.xlsx](https://github.com/temagraf/ddl/blob/main/source/hw-12-2-2.xlsx)
+### Файл с описанием всех таблиц базы SakilaDB : [hw-12-2-2.xlsx](https://github.com/temagraf/dll/blob/main/source/hw-12-2-2.xlsx)
 
 ---
 ## Задание 3*
@@ -146,7 +146,7 @@ mysql -u root -p
 show grants for 'sys_temp'@'%';
 exit
 ```
-![Скриншот-4](https://github.com/temagraf/ddl/blob/main/img/12-2-3.png)
+![Скриншот-4](https://github.com/temagraf/dll/blob/main/img/12-2-3.png)
 *Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.*
 
 ---
